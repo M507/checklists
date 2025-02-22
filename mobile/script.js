@@ -23,19 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
         items.forEach((item, index) => {
             const row = tbody.insertRow();
             
-            // Add a column for the checklist number
+            // Checklist number column
             row.insertCell(0).textContent = index + 1;
     
             row.insertCell(1).textContent = item.name;
             row.insertCell(2).textContent = item.description;
     
+            // Comments column - use textarea instead of input
             const commentCell = row.insertCell(3);
-            const input = document.createElement('input');
-            input.type = 'text';
-            input.value = item.comments;
-            input.onchange = () => item.comments = input.value;
-            commentCell.appendChild(input);
+            const textarea = document.createElement('textarea');
+            textarea.value = item.comments;
+            textarea.classList.add('comment-box'); // Apply styling
+            textarea.onchange = () => item.comments = textarea.value;
+            commentCell.appendChild(textarea);
     
+            // Checkbox column
             const checkCell = row.insertCell(4);
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
