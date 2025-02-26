@@ -28,15 +28,42 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .navbar {
     width: 100%;
     background-color: #333;
-    padding: 10px 0;
+    padding: 10px 20px;
     display: flex;
-    justify-content: center;
+    align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none; /* Removes underline */
+    margin-right: 0px;
+    transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+    color: #4caf50; /* Changes color on hover */
+}
+
+/* Separator */
+.navbar-separator {
+    height: 30px;
+    width: 2px;
+    background-color: white;
+    margin: 0 20px; /* Space around the separator */
+}
+
 
 button {
     padding: 10px 20px;
