@@ -1,0 +1,3912 @@
+const checklistItems = [
+    {
+        "name": "Perform Google Dorks search",
+        "description": "Test related to Open Source Reconnaissance.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Open Source Reconnaissance"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Perform OSINT",
+        "description": "Test related to Open Source Reconnaissance.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Open Source Reconnaissance"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Find the type of Web Server",
+        "description": "Test related to Fingerprinting Web Server.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprinting Web Server"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Find the version details of the Web Server",
+        "description": "Test related to Fingerprinting Web Server.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprinting Web Server"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View the Robots.txt file",
+        "description": "Test related to Looking For Metafiles.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Looking For Metafiles"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View the Sitemap.xml file",
+        "description": "Test related to Looking For Metafiles.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Looking For Metafiles"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View the Humans.txt file",
+        "description": "Test related to Looking For Metafiles.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Looking For Metafiles"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View the Security.txt file",
+        "description": "Test related to Looking For Metafiles.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Looking For Metafiles"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Enumerating with Nmap",
+        "description": "Test related to Enumerating Web Server\u2019s Applications.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Enumerating Web Server\u2019s Applications"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Enumerating with Netcat",
+        "description": "Test related to Enumerating Web Server\u2019s Applications.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Enumerating Web Server\u2019s Applications"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Perform a DNS lookup",
+        "description": "Test related to Enumerating Web Server\u2019s Applications.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Enumerating Web Server\u2019s Applications"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Perform a Reverse DNS lookup",
+        "description": "Test related to Enumerating Web Server\u2019s Applications.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Enumerating Web Server\u2019s Applications"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Inspect the page source for sensitive info",
+        "description": "Test related to Review The Web Contents.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Review The Web Contents"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to find Sensitive Javascript codes",
+        "description": "Test related to Review The Web Contents.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Review The Web Contents"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to find any keys",
+        "description": "Test related to Review The Web Contents.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Review The Web Contents"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Make sure the autocomplete is disabled",
+        "description": "Test related to Review The Web Contents.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Review The Web Contents"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify what the methods used are?",
+        "description": "Test related to Identifying Application\u2019s Entry Points.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Identifying Application\u2019s Entry Points"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify where the methods used are?",
+        "description": "Test related to Identifying Application\u2019s Entry Points.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Identifying Application\u2019s Entry Points"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the Injection point",
+        "description": "Test related to Identifying Application\u2019s Entry Points.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Identifying Application\u2019s Entry Points"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use Burp Suite",
+        "description": "Test related to Mapping Execution Paths.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Mapping Execution Paths"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use Dirsearch",
+        "description": "Test related to Mapping Execution Paths.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Mapping Execution Paths"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use Gobuster",
+        "description": "Test related to Mapping Execution Paths.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Mapping Execution Paths"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use the Wappalyzer browser extension",
+        "description": "Test related to Fingerprint Web Application Framework.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprint Web Application Framework"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use Whatweb",
+        "description": "Test related to Fingerprint Web Application Framework.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprint Web Application Framework"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View URL extensions",
+        "description": "Test related to Fingerprint Web Application Framework.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprint Web Application Framework"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View HTML source code",
+        "description": "Test related to Fingerprint Web Application Framework.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprint Web Application Framework"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View the cookie parameter",
+        "description": "Test related to Fingerprint Web Application Framework.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprint Web Application Framework"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "View the HTTP headers",
+        "description": "Test related to Fingerprint Web Application Framework.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Fingerprint Web Application Framework"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Map the overall site structure",
+        "description": "Test related to Map Application Architecture.",
+        "tags": [
+            "INFORMATION GATHERING",
+            "Map Application Architecture"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the network configuration",
+        "description": "Test related to Test Network Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Network Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for default settings",
+        "description": "Test related to Test Network Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Network Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for default credentials",
+        "description": "Test related to Test Network Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Network Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure only required modules are used",
+        "description": "Test related to Test Application Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Application Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure unwanted modules are disabled",
+        "description": "Test related to Test Application Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Application Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the server can handle DOS",
+        "description": "Test related to Test Application Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Application Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check how the application is handling 4xx & 5xx errors",
+        "description": "Test related to Test Application Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Application Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the privilege required to run",
+        "description": "Test related to Test Application Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Application Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check logs for sensitive info",
+        "description": "Test related to Test Application Configuration.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Application Configuration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the server won\u2019t return sensitive extensions",
+        "description": "Test related to Test File Extension Handling.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test File Extension Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the server won\u2019t accept malicious extensions",
+        "description": "Test related to Test File Extension Handling.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test File Extension Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for file upload vulnerabilities",
+        "description": "Test related to Test File Extension Handling.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test File Extension Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure unreferenced files don\u2019t contain any sensitive info",
+        "description": "Test related to Review Backup & Unreferenced Files.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Review Backup & Unreferenced Files"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the namings of old and new backup files",
+        "description": "Test related to Review Backup & Unreferenced Files.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Review Backup & Unreferenced Files"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the functionality of unreferenced pages",
+        "description": "Test related to Review Backup & Unreferenced Files.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Review Backup & Unreferenced Files"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to find the Infrastructure Interface",
+        "description": "Test related to Enumerate Infrastructure & Admin Interfaces.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Enumerate Infrastructure & Admin Interfaces"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to find the Admin Interface",
+        "description": "Test related to Enumerate Infrastructure & Admin Interfaces.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Enumerate Infrastructure & Admin Interfaces"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the hidden admin functionalities",
+        "description": "Test related to Enumerate Infrastructure & Admin Interfaces.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Enumerate Infrastructure & Admin Interfaces"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Discover the supported methods",
+        "description": "Test related to Testing HTTP Methods.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Testing HTTP Methods"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the PUT method is disabled",
+        "description": "Test related to Testing HTTP Methods.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Testing HTTP Methods"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the OPTIONS method is disabled",
+        "description": "Test related to Testing HTTP Methods.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Testing HTTP Methods"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test access control bypass",
+        "description": "Test related to Testing HTTP Methods.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Testing HTTP Methods"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for XST attacks",
+        "description": "Test related to Testing HTTP Methods.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Testing HTTP Methods"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HTTP method overriding",
+        "description": "Test related to Testing HTTP Methods.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Testing HTTP Methods"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure HSTS is enabled",
+        "description": "Test related to Test HSTS.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test HSTS"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for Adobe\u2019s Cross Domain Policy",
+        "description": "Test related to Test RIA Cross Domain Policy.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test RIA Cross Domain Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure it has the least privilege",
+        "description": "Test related to Test RIA Cross Domain Policy.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test RIA Cross Domain Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the permissions for sensitive files",
+        "description": "Test related to Test File Permission.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test File Permission"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for directory enumeration",
+        "description": "Test related to Test File Permission.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test File Permission"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test DNS, A, and CNAME records for subdomain takeover",
+        "description": "Test related to Test For Subdomain Takeover.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test For Subdomain Takeover"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test NS records for subdomain takeover",
+        "description": "Test related to Test For Subdomain Takeover.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test For Subdomain Takeover"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test 404 response for subdomain takeover",
+        "description": "Test related to Test For Subdomain Takeover.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test For Subdomain Takeover"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the sensitive paths of AWS",
+        "description": "Test related to Test Cloud Storage.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Cloud Storage"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the sensitive paths of Google Cloud",
+        "description": "Test related to Test Cloud Storage.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Cloud Storage"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the sensitive paths of Azure",
+        "description": "Test related to Test Cloud Storage.",
+        "tags": [
+            "CONFIGURATION & DEPLOYMENT MANAGEMENT TESTING",
+            "Test Cloud Storage"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for forced browsing",
+        "description": "Test related to Test Role Definitions.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Role Definitions"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for IDOR (Insecure Direct Object Reference)",
+        "description": "Test related to Test Role Definitions.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Role Definitions"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for parameter tampering",
+        "description": "Test related to Test Role Definitions.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Role Definitions"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure low privilege users can\u2019t able to access high privilege resources",
+        "description": "Test related to Test Role Definitions.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Role Definitions"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the same user or identity can\u2019t register again and again",
+        "description": "Test related to Test User Registration Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test User Registration Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the registrations are verified",
+        "description": "Test related to Test User Registration Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test User Registration Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure disposable email addresses are rejected",
+        "description": "Test related to Test User Registration Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test User Registration Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check what proof is required for successful registration",
+        "description": "Test related to Test User Registration Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test User Registration Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the verification for the provisioning process",
+        "description": "Test related to Test Account Provisioning Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Account Provisioning Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the verification for the de-provisioning process",
+        "description": "Test related to Test Account Provisioning Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Account Provisioning Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the provisioning rights for an admin user to other users",
+        "description": "Test related to Test Account Provisioning Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Account Provisioning Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check whether a user is able to de-provision themself or not?",
+        "description": "Test related to Test Account Provisioning Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Account Provisioning Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the resources of a de-provisioned user",
+        "description": "Test related to Test Account Provisioning Process.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test Account Provisioning Process"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the response when a valid username and password entered",
+        "description": "Test related to Testing For Account Enumeration.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Testing For Account Enumeration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the response when a valid username and an invalid password entered",
+        "description": "Test related to Testing For Account Enumeration.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Testing For Account Enumeration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the response when an invalid username and password entered",
+        "description": "Test related to Testing For Account Enumeration.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Testing For Account Enumeration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the rate-limiting functionality is enabled in username and password fields",
+        "description": "Test related to Testing For Account Enumeration.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Testing For Account Enumeration"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the response for both valid and invalid usernames",
+        "description": "Test related to Test For Weak Username Policy.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test For Weak Username Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for username enumeration",
+        "description": "Test related to Test For Weak Username Policy.",
+        "tags": [
+            "IDENTITY MANAGEMENT TESTING",
+            "Test For Weak Username Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the HTTP login page",
+        "description": "Test related to Test For Un-Encrypted Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Un-Encrypted Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the HTTP register or sign-in page",
+        "description": "Test related to Test For Un-Encrypted Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Un-Encrypted Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for HTTP forgot password page",
+        "description": "Test related to Test For Un-Encrypted Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Un-Encrypted Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for HTTP change password",
+        "description": "Test related to Test For Un-Encrypted Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Un-Encrypted Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for resources on HTTP after logout",
+        "description": "Test related to Test For Un-Encrypted Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Un-Encrypted Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for forced browsing to HTTP pages",
+        "description": "Test related to Test For Un-Encrypted Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Un-Encrypted Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test with default credentials",
+        "description": "Test related to Test For Default Credentials.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Default Credentials"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test organization name as credentials",
+        "description": "Test related to Test For Default Credentials.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Default Credentials"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for response manipulation",
+        "description": "Test related to Test For Default Credentials.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Default Credentials"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for the default username and a blank password",
+        "description": "Test related to Test For Default Credentials.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Default Credentials"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Review the page source for credentials",
+        "description": "Test related to Test For Default Credentials.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Default Credentials"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the account has been locked after 3-5 incorrect attempts",
+        "description": "Test related to Test For Weak Lockout Mechanism.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Lockout Mechanism"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the system accepts only the valid CAPTCHA",
+        "description": "Test related to Test For Weak Lockout Mechanism.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Lockout Mechanism"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the system rejects the invalid CAPTCHA",
+        "description": "Test related to Test For Weak Lockout Mechanism.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Lockout Mechanism"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure CAPTCHA code regenerated after reloaded",
+        "description": "Test related to Test For Weak Lockout Mechanism.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Lockout Mechanism"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure CAPTCHA reloads after entering the wrong code",
+        "description": "Test related to Test For Weak Lockout Mechanism.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Lockout Mechanism"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the user has a recovery option for a lockout account",
+        "description": "Test related to Test For Weak Lockout Mechanism.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Lockout Mechanism"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test forced browsing directly to the internal dashboard without login",
+        "description": "Test related to Test For Bypassing Authentication Schema.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Bypassing Authentication Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for session ID prediction",
+        "description": "Test related to Test For Bypassing Authentication Schema.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Bypassing Authentication Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for authentication parameter tampering",
+        "description": "Test related to Test For Bypassing Authentication Schema.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Bypassing Authentication Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for SQL injection on the login page",
+        "description": "Test related to Test For Bypassing Authentication Schema.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Bypassing Authentication Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test to gain access with the help of session ID",
+        "description": "Test related to Test For Bypassing Authentication Schema.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Bypassing Authentication Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test multiple logins allowed or not?",
+        "description": "Test related to Test For Bypassing Authentication Schema.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Bypassing Authentication Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure that the stored password is encrypted",
+        "description": "Test related to Test For Vulnerable Remember Password.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Vulnerable Remember Password"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure that the stored password is on the server-side",
+        "description": "Test related to Test For Vulnerable Remember Password.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Vulnerable Remember Password"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure proper cache-control is set on sensitive pages",
+        "description": "Test related to Test For Browser Cache Weakness.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Browser Cache Weakness"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure no sensitive data is stored in the browser cache storage",
+        "description": "Test related to Test For Browser Cache Weakness.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Browser Cache Weakness"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the password policy is set to strong",
+        "description": "Test related to Test For Weak Password Policy.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for password reusability",
+        "description": "Test related to Test For Weak Password Policy.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the user is prevented to use his username as a password",
+        "description": "Test related to Test For Weak Password Policy.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the usage of common weak passwords",
+        "description": "Test related to Test For Weak Password Policy.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the minimum password length to be set",
+        "description": "Test related to Test For Weak Password Policy.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the maximum password length to be set",
+        "description": "Test related to Test For Weak Password Policy.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Policy"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the complexity of the questions",
+        "description": "Test related to Testing For Weak Security Questions.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Testing For Weak Security Questions"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for brute-forcing",
+        "description": "Test related to Testing For Weak Security Questions.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Testing For Weak Security Questions"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check what information is required to reset the password",
+        "description": "Test related to Test For Weak Password Reset Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Reset Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for password reset function with HTTP",
+        "description": "Test related to Test For Weak Password Reset Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Reset Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test the randomness of the password reset tokens",
+        "description": "Test related to Test For Weak Password Reset Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Reset Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test the uniqueness of the password reset tokens",
+        "description": "Test related to Test For Weak Password Reset Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Reset Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for rate limiting on password reset tokens",
+        "description": "Test related to Test For Weak Password Reset Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Reset Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the token must expire after being used",
+        "description": "Test related to Test For Weak Password Reset Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Reset Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the token must expire after not being used for a long time",
+        "description": "Test related to Test For Weak Password Reset Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Reset Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check if the old password asked to make a change",
+        "description": "Test related to Test For Weak Password Change Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Change Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the uniqueness of the forgotten password",
+        "description": "Test related to Test For Weak Password Change Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Change Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for blank password change",
+        "description": "Test related to Test For Weak Password Change Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Change Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for password change function with HTTP",
+        "description": "Test related to Test For Weak Password Change Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Change Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the old password is not displayed after changed",
+        "description": "Test related to Test For Weak Password Change Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Change Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the other sessions got destroyed after the password change",
+        "description": "Test related to Test For Weak Password Change Function.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Password Change Function"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test authentication on the desktop browsers",
+        "description": "Test related to Test For Weak Authentication In Alternative Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Authentication In Alternative Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test authentication on the mobile browsers",
+        "description": "Test related to Test For Weak Authentication In Alternative Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Authentication In Alternative Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test authentication in a different country",
+        "description": "Test related to Test For Weak Authentication In Alternative Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Authentication In Alternative Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test authentication in a different language",
+        "description": "Test related to Test For Weak Authentication In Alternative Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Authentication In Alternative Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test authentication on desktop applications",
+        "description": "Test related to Test For Weak Authentication In Alternative Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Authentication In Alternative Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test authentication on mobile applications",
+        "description": "Test related to Test For Weak Authentication In Alternative Channel.",
+        "tags": [
+            "AUTHENTICATION TESTING",
+            "Test For Weak Authentication In Alternative Channel"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the injection point on the URL",
+        "description": "Test related to Testing Directory Traversal File Include.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Directory Traversal File Include"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for Local File Inclusion",
+        "description": "Test related to Testing Directory Traversal File Include.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Directory Traversal File Include"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for Remote File Inclusion",
+        "description": "Test related to Testing Directory Traversal File Include.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Directory Traversal File Include"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal on the URL parameter",
+        "description": "Test related to Testing Directory Traversal File Include.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Directory Traversal File Include"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal on the cookie parameter",
+        "description": "Test related to Testing Directory Traversal File Include.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Directory Traversal File Include"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Base64 encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with URL encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with ASCII encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with HTML encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Hex encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Binary encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Octal encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Gzip encoding",
+        "description": "Test related to Testing Traversal With Encoding.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Traversal With Encoding"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Unix schemes",
+        "description": "Test related to Testing Travesal With Different OS Schemes.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Travesal With Different OS Schemes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Windows schemes",
+        "description": "Test related to Testing Travesal With Different OS Schemes.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Travesal With Different OS Schemes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Mac schemes",
+        "description": "Test related to Testing Travesal With Different OS Schemes.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Testing Travesal With Different OS Schemes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with Double encoding",
+        "description": "Test related to Test Other Encoding Techniques.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test Other Encoding Techniques"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with all characters encode",
+        "description": "Test related to Test Other Encoding Techniques.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test Other Encoding Techniques"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Traversal with only special characters encode",
+        "description": "Test related to Test Other Encoding Techniques.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test Other Encoding Techniques"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for Horizontal authorization schema bypass",
+        "description": "Test related to Test Authorization Schema Bypass.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test Authorization Schema Bypass"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for Vertical authorization schema bypass",
+        "description": "Test related to Test Authorization Schema Bypass.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test Authorization Schema Bypass"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test override the target with custom headers",
+        "description": "Test related to Test Authorization Schema Bypass.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test Authorization Schema Bypass"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the injection point",
+        "description": "Test related to Test For Privilege Escalation.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Privilege Escalation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for bypassing the security measures",
+        "description": "Test related to Test For Privilege Escalation.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Privilege Escalation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for forced browsing",
+        "description": "Test related to Test For Privilege Escalation.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Privilege Escalation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for IDOR",
+        "description": "Test related to Test For Privilege Escalation.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Privilege Escalation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for parameter tampering to high privileged user",
+        "description": "Test related to Test For Privilege Escalation.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Privilege Escalation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test to change the ID parameter",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test to add parameters at the endpoints",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HTTP parameter pollution",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by adding an extension at the end",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test with outdated API versions",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by wrapping the ID with an array",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by wrapping the ID with a JSON object",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for JSON parameter pollution",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by changing the case",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for path traversal",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by changing words",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by changing methods",
+        "description": "Test related to Test For Insecure Direct Object Reference.",
+        "tags": [
+            "AUTHORIZATION TESTING",
+            "Test For Insecure Direct Object Reference"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure all Set-Cookie directives are secure",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure no cookie operation takes place over an unencrypted channel",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the cookie can\u2019t be forced over an unencrypted channel",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the HTTPOnly flag is enabled",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check if any cookies are persistent",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for session cookies and cookie expiration date/time",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for session fixation",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for concurrent login",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for session after logout",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for session after closing the browser",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try decoding cookies (Base64, Hex, URL, etc)",
+        "description": "Test related to Test For Session Management Schema.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Management Schema"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the cookie must be set with the secure attribute",
+        "description": "Test related to Test For Cookie Attributes.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cookie Attributes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the cookie must be set with the path attribute",
+        "description": "Test related to Test For Cookie Attributes.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cookie Attributes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the cookie must have the HTTPOnly flag",
+        "description": "Test related to Test For Cookie Attributes.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cookie Attributes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure new cookies have been issued upon a successful authentication",
+        "description": "Test related to Test For Session Fixation.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Fixation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test manipulating the cookies",
+        "description": "Test related to Test For Session Fixation.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Fixation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for encryption",
+        "description": "Test related to Test For Exposed Session Variables.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Exposed Session Variables"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for GET and POST vulnerabilities",
+        "description": "Test related to Test For Exposed Session Variables.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Exposed Session Variables"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test if GET request incorporating the session ID used",
+        "description": "Test related to Test For Exposed Session Variables.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Exposed Session Variables"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by interchanging POST with GET method",
+        "description": "Test related to Test For Exposed Session Variables.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Exposed Session Variables"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test after password change",
+        "description": "Test related to Test For Back Refresh Attack.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Back Refresh Attack"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test after logout",
+        "description": "Test related to Test For Back Refresh Attack.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Back Refresh Attack"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check if the token is validated on the server-side or not",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check if the token is validated for full or partial length",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check by comparing the CSRF tokens for multiple dummy accounts",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by interchanging POST with GET method",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by removing the CSRF token parameter",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by removing the CSRF token and using a blank parameter",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by using unused tokens",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by replacing the CSRF token with its own values",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by changing the content type to form-multipart",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by changing or deleting some characters of the CSRF token",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by changing the referrer to Referrer",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF by changing the host values",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check CSRF alongside clickjacking",
+        "description": "Test related to Test For Cross Site Request Forgery.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Cross Site Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check the log out function on different pages",
+        "description": "Test related to Test For Logout Functionality.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Logout Functionality"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check for the visibility of the logout button",
+        "description": "Test related to Test For Logout Functionality.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Logout Functionality"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure after logout the session was ended",
+        "description": "Test related to Test For Logout Functionality.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Logout Functionality"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure after logout we can\u2019t able to access the dashboard by pressing the back button",
+        "description": "Test related to Test For Logout Functionality.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Logout Functionality"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure proper session timeout has been set",
+        "description": "Test related to Test For Logout Functionality.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Logout Functionality"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure there is a session timeout exists",
+        "description": "Test related to Test For Session Timeout.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Timeout"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure after the timeout, all of the tokens are destroyed",
+        "description": "Test related to Test For Session Timeout.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Timeout"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify all the session variables",
+        "description": "Test related to Test For Session Puzzling.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Puzzling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to break the logical flow of the session generation",
+        "description": "Test related to Test For Session Puzzling.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Puzzling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test session hijacking on target that doesn\u2019t has HSTS enabled",
+        "description": "Test related to Test For Session Hijacking.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Hijacking"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by login with the help of captured cookies",
+        "description": "Test related to Test For Session Hijacking.",
+        "tags": [
+            "SESSION MANAGEMENT TESTING",
+            "Test For Session Hijacking"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure these characters are filtered <>\u2019\u2019&\u201d\u201d",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test with a character escape sequence",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by replacing < and > with HTML entities &lt; and &gt;",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test payload with both lower and upper case",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test to break firewall regex by new line /r/n",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test with double encoding",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test with recursive filters",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test injecting anchor tags without whitespace",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by replacing whitespace with bullets",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by changing HTTP methods",
+        "description": "Test related to Test For Reflected Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Reflected Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify stored input parameters that will reflect on the client-side",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for input parameters on the profile page",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for input parameters on the shopping cart page",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for input parameters on the file upload page",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for input parameters on the settings page",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for input parameters on the forum, comment page",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test uploading a file with XSS payload as its file name",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test with HTML tags",
+        "description": "Test related to Test For Stored Cross Site Scripting.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Stored Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the backend server and parsing method used",
+        "description": "Test related to Test For HTTP Parameter Pollution.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For HTTP Parameter Pollution"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to access the injection point",
+        "description": "Test related to Test For HTTP Parameter Pollution.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For HTTP Parameter Pollution"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass the input filters using HTTP Parameter Pollution",
+        "description": "Test related to Test For HTTP Parameter Pollution.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For HTTP Parameter Pollution"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test SQL Injection on authentication forms",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test SQL Injection on the search bar",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test SQL Injection on editable characteristics",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to find SQL keywords or entry point detections",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to inject SQL queries",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use tools like SQLmap or Hackbar",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use Google dorks to find the SQL keywords",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try GET based SQL Injection",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try POST based SQL Injection",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try COOKIE based SQL Injection",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try HEADER based SQL Injection",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with null bytes before the SQL query",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with URL encoding",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with both lower and upper cases",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with SQL Tamper scripts",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with SQL Time delay payloads",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with SQL Conditional delays",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with Boolean based SQL",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try SQL Injection with Time based SQL",
+        "description": "Test related to Test For SQL Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For SQL Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use LDAP search filters",
+        "description": "Test related to Test For LDAP Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For LDAP Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try LDAP Injection for access control bypass",
+        "description": "Test related to Test For LDAP Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For LDAP Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Check if the application is using XML for processing",
+        "description": "Test related to Testing For XML Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Testing For XML Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the XML Injection point by XML metacharacter",
+        "description": "Test related to Testing For XML Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Testing For XML Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Construct XSS payload on top of XML",
+        "description": "Test related to Testing For XML Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Testing For XML Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use Google dorks to find the SSI",
+        "description": "Test related to Test For Server Side Includes.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Includes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Construct RCE on top of SSI",
+        "description": "Test related to Test For Server Side Includes.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Includes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Construct other injections on top of SSI",
+        "description": "Test related to Test For Server Side Includes.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Includes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Injecting SSI on login pages, header fields, referrer, etc",
+        "description": "Test related to Test For Server Side Includes.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Includes"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify XPATH Injection point",
+        "description": "Test related to Test For XPATH Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For XPATH Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for XPATH Injection",
+        "description": "Test related to Test For XPATH Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For XPATH Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify IMAP SMTP Injection point",
+        "description": "Test related to Test For IMAP SMTP Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For IMAP SMTP Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Understand the data flow",
+        "description": "Test related to Test For IMAP SMTP Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For IMAP SMTP Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Understand the deployment structure of the system",
+        "description": "Test related to Test For IMAP SMTP Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For IMAP SMTP Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Assess the injection impact",
+        "description": "Test related to Test For IMAP SMTP Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For IMAP SMTP Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for LFI keywords",
+        "description": "Test related to Test For Local File Inclusion.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Local File Inclusion"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to change the local path",
+        "description": "Test related to Test For Local File Inclusion.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Local File Inclusion"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use the LFI payload list",
+        "description": "Test related to Test For Local File Inclusion.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Local File Inclusion"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test LFI by adding a null byte at the end",
+        "description": "Test related to Test For Local File Inclusion.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Local File Inclusion"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for RFI keywords",
+        "description": "Test related to Test For Remote File Inclusion.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Remote File Inclusion"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to change the remote path",
+        "description": "Test related to Test For Remote File Inclusion.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Remote File Inclusion"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use the RFI payload list",
+        "description": "Test related to Test For Remote File Inclusion.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Remote File Inclusion"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the Injection points",
+        "description": "Test related to Test For Command Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Command Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for Command Injection keywords",
+        "description": "Test related to Test For Command Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Command Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Command Injection using different delimiters",
+        "description": "Test related to Test For Command Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Command Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Command Injection with payload list",
+        "description": "Test related to Test For Command Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Command Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test Command Injection with different OS commands",
+        "description": "Test related to Test For Command Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Command Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the Injection points",
+        "description": "Test related to Test For Format String Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Format String Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use different format parameters as payloads",
+        "description": "Test related to Test For Format String Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Format String Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Assess the injection impact",
+        "description": "Test related to Test For Format String Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Format String Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI by changing the real Host parameter",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI by adding X-Forwarded Host parameter",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI by swapping the real Host and X-Forwarded Host parameter",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI by adding two Host parameters",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI by adding the target values in front of the original values",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI by adding the target with a slash after the original values",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI with other injections on the Host parameter",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for HHI by password reset poisoning",
+        "description": "Test related to Test For Host Header Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Host Header Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for SSRF keywords",
+        "description": "Test related to Test For Server Side Request Forgery.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Search for SSRF keywords only under the request header and body",
+        "description": "Test related to Test For Server Side Request Forgery.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the Injection points",
+        "description": "Test related to Test For Server Side Request Forgery.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test if the Injection points are exploitable",
+        "description": "Test related to Test For Server Side Request Forgery.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Assess the injection impact",
+        "description": "Test related to Test For Server Side Request Forgery.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Request Forgery"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the Template injection vulnerability points",
+        "description": "Test related to Test For Server Side Template Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Template Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the Templating engine",
+        "description": "Test related to Test For Server Side Template Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Template Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use the tplmap to exploit",
+        "description": "Test related to Test For Server Side Template Injection.",
+        "tags": [
+            "INPUT VALIDATION TESTING",
+            "Test For Server Side Template Injection"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the error output",
+        "description": "Test related to Test For Improper Error Handling.",
+        "tags": [
+            "ERROR HANDLING TESTING",
+            "Test For Improper Error Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Analyze the different outputs returned",
+        "description": "Test related to Test For Improper Error Handling.",
+        "tags": [
+            "ERROR HANDLING TESTING",
+            "Test For Improper Error Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for common error handling flaws",
+        "description": "Test related to Test For Improper Error Handling.",
+        "tags": [
+            "ERROR HANDLING TESTING",
+            "Test For Improper Error Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test error handling by modifying the URL parameter",
+        "description": "Test related to Test For Improper Error Handling.",
+        "tags": [
+            "ERROR HANDLING TESTING",
+            "Test For Improper Error Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test error handling by uploading unrecognized file formats",
+        "description": "Test related to Test For Improper Error Handling.",
+        "tags": [
+            "ERROR HANDLING TESTING",
+            "Test For Improper Error Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test error handling by entering unrecognized inputs",
+        "description": "Test related to Test For Improper Error Handling.",
+        "tags": [
+            "ERROR HANDLING TESTING",
+            "Test For Improper Error Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test error handling by making all possible errors",
+        "description": "Test related to Test For Improper Error Handling.",
+        "tags": [
+            "ERROR HANDLING TESTING",
+            "Test For Improper Error Handling"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for DROWN weakness on SSLv2 protocol",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for POODLE weakness on SSLv3 protocol",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for BEAST weakness on TLSv1.0 protocol",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for FREAK weakness on export cipher suites",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for Null ciphers",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for NOMORE weakness on RC4",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for LUCKY 13 weakness on CBC mode ciphers",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for CRIME weakness on TLS compression",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for LOGJAM on DHE keys",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the digital certificates should have at least 2048 bits of key length",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the digital certificates should have at least SHA-256 signature algorithm",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the digital certificates should not use MDF and SHA-1",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the validity of the digital certificate",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the minimum key length requirements",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for weak cipher suites",
+        "description": "Test related to Test For Weak Transport Layer Security.",
+        "tags": [
+            "WEAK CRYPTOGRAPHY TESTING",
+            "Test For Weak Transport Layer Security"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the logic of how the application works",
+        "description": "Test related to Test For Business Logic.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Business Logic"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Identify the functionality of all the buttons",
+        "description": "Test related to Test For Business Logic.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Business Logic"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by changing the numerical values into high or negative values",
+        "description": "Test related to Test For Business Logic.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Business Logic"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by changing the quantity",
+        "description": "Test related to Test For Business Logic.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Business Logic"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test by modifying the payments",
+        "description": "Test related to Test For Business Logic.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Business Logic"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for parameter tampering",
+        "description": "Test related to Test For Business Logic.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Business Logic"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by uploading malicious files",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by putting your IP address on the file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by right to left override",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by encoded file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by XSS payload on the file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by RCE payload on the file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by LFI payload on the file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by RFI payload on the file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by SQL payload on the file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by other injections on the file name",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by Inserting the payload inside of an image by the bmp.pl tool",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test malicious file upload by uploading large files (leads to DOS)",
+        "description": "Test related to Test For Malicious File Upload.",
+        "tags": [
+            "BUSINESS LOGIC TESTING",
+            "Test For Malicious File Upload"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to identify DOM sinks",
+        "description": "Test related to Test For DOM Based Cross Site Scripting.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For DOM Based Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Build payloads to that DOM sink type",
+        "description": "Test related to Test For DOM Based Cross Site Scripting.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For DOM Based Cross Site Scripting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for URL redirect parameters",
+        "description": "Test related to Test For URL Redirect.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For URL Redirect"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for URL redirection on domain parameters",
+        "description": "Test related to Test For URL Redirect.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For URL Redirect"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for URL redirection by using a payload list",
+        "description": "Test related to Test For URL Redirect.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For URL Redirect"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for URL redirection by using a whitelisted word at the end",
+        "description": "Test related to Test For URL Redirect.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For URL Redirect"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for URL redirection by creating a new subdomain with the same as the target",
+        "description": "Test related to Test For URL Redirect.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For URL Redirect"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for URL redirection by XSS",
+        "description": "Test related to Test For URL Redirect.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For URL Redirect"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test for URL redirection by profile URL flaw",
+        "description": "Test related to Test For URL Redirect.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For URL Redirect"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Look for \u201cAccess-Control-Allow-Origin\u201d on the response",
+        "description": "Test related to Test For Cross Origin Resource Sharing.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For Cross Origin Resource Sharing"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Use the CORS HTML exploit code for further exploitation",
+        "description": "Test related to Test For Cross Origin Resource Sharing.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For Cross Origin Resource Sharing"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure \u201cX-Frame-Options\u201d headers are enabled",
+        "description": "Test related to Test For Clickjacking.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For Clickjacking"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Exploit with iframe HTML code for POC",
+        "description": "Test related to Test For Clickjacking.",
+        "tags": [
+            "CLIENT SIDE TESTING",
+            "Test For Clickjacking"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure rate limiting is enabled",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by changing the case of the endpoints",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by adding / at the end of the URL",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by adding HTTP headers",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by adding HTTP headers twice",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by adding Origin headers",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by IP rotation",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by using null bytes at the end",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass rate limiting by using race conditions",
+        "description": "Test related to Test For No-Rate Limiting.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For No-Rate Limiting"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the website is striping the geodata",
+        "description": "Test related to Test For EXIF Geodata.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For EXIF Geodata"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test with EXIF checker",
+        "description": "Test related to Test For EXIF Geodata.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For EXIF Geodata"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure there is no broken links are there",
+        "description": "Test related to Test For Broken Link Hijack.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Broken Link Hijack"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test broken links by using the blc tool",
+        "description": "Test related to Test For Broken Link Hijack.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Broken Link Hijack"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Ensure the website is having SPF record",
+        "description": "Test related to Test For SPF.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For SPF"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Test SPF by nslookup command",
+        "description": "Test related to Test For SPF.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For SPF"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA by using poor session management",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA via the OAuth mechanism",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA via brute-forcing",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA via response manipulation",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA by using activation links to login",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA by using status code manipulation",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA by changing the email or password",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA by using a null or empty entry",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA by changing the boolean into false",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass 2FA by removing the 2FA parameter on the request",
+        "description": "Test related to Test For Weak 2FA.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak 2FA"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass OTP by entering the old OTP",
+        "description": "Test related to Test For Weak OTP Implementation.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak OTP Implementation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass OTP by brute-forcing",
+        "description": "Test related to Test For Weak OTP Implementation.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak OTP Implementation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass OTP by using a null or empty entry",
+        "description": "Test related to Test For Weak OTP Implementation.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak OTP Implementation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass OTP by response manipulation",
+        "description": "Test related to Test For Weak OTP Implementation.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak OTP Implementation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    },
+    {
+        "name": "Try to bypass OTP by status code manipulation",
+        "description": "Test related to Test For Weak OTP Implementation.",
+        "tags": [
+            "OTHER COMMON ISSUES",
+            "Test For Weak OTP Implementation"
+        ],
+        "comments": "",
+        "recommendations": "Follow best security practices to mitigate potential risks."
+    }
+];

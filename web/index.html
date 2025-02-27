@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Checklist</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="checklist.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-separator"></div> 
+        <a href="https://Github.com/M507" class="logo-text">Mobile Pentest Checklist</a> <!-- Clickable Text -->
+        <div class="navbar-separator"></div> 
+        <button id="loadButton">Load Checklist</button>
+        <button id="saveButton">Save Progress</button>
+        <button id="importButton">Import Progress</button>
+        <select id="tagFilter" onchange="filterTags()">
+            <option value="all">All Tags</option>
+            <option value="Static">Static</option>
+            <option value="Dynamic">Dynamic</option>
+            <!-- Add other specific tags as needed -->
+        </select>
+    </div>
+    
+    <div id="loadingScreen">Loading...</div>
+    <table id="checklistTable">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Comments</th>
+                <th>Check</th>
+                <th>Tags</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <!-- Checklist items will be inserted here -->
+        </tbody>
+    </table>
+    
+    <input type="file" id="fileInput" hidden>
+    
+</body>
+</html>
