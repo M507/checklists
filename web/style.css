@@ -5,69 +5,163 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header {
+    background: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #333;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+    width: 50px;
+    height: auto;
+}
+
+.navbar .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo-text:hover {
+    color: #4caf50;
+}
+
+.navbar-separator {
+    height: 30px;
+    width: 2px;
+    background-color: white;
+    margin: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.social {
+    margin-top: 10px;
+}
+
+.social a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.query {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search {
+    font-size: 1.2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.results-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.results table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.results th, .results td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.results th {
+    background: #333;
+    color: #fff;
+}
+
+.subfooter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: auto;
+}
+
 .comment-box {
     width: 100%;
-    height: 100px; /* Increased height */
-    resize: vertical; /* Allows user to adjust the height */
+    height: 100px;
+    resize: vertical;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #fff;
     color: #333;
-    font-size: 16px; /* Bigger font for readability */
+    font-size: 16px;
     font-family: inherit;
 }
 
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 0;
-    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-.navbar {
-    width: 100%;
-    background-color: #333;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.logo {
-    width: 50px;
-    height: auto;
-    margin-right: 10px;
-}
-
-.logo-text {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
-    text-decoration: none; /* Removes underline */
-    margin-right: 0px;
-    transition: color 0.3s ease;
-}
-
-.logo-text:hover {
-    color: #4caf50; /* Changes color on hover */
-}
-
-/* Separator */
-.navbar-separator {
-    height: 30px;
-    width: 2px;
-    background-color: white;
-    margin: 0 20px; /* Space around the separator */
-}
-
-
 button {
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: 10px;
     border: none;
     background-color: #4caf50;
     color: white;
@@ -81,22 +175,23 @@ button:hover {
 }
 
 table {
-    width: 80%;
-    margin: 20px auto;
+    width: 100%;
+    margin: 20px 0;
     border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 th, td {
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-    color: #fff;
 }
 
 th {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #333;
+    color: #fff;
 }
 
 input[type="checkbox"] {
@@ -115,7 +210,7 @@ input[type="checkbox"] {
     justify-content: center;
     font-size: 2em;
     color: #fff;
-    visibility: hidden; /* hidden by default */
+    visibility: hidden;
 }
 
 input[type="file"] {
@@ -131,14 +226,13 @@ input[type="text"] {
     color: #333;
 }
 
-
 select {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: #4caf50;
     color: white;
     border: none;
-    margin-left: 10px; /* Adds spacing on the left */
+    margin-left: 10px;
     cursor: pointer;
 }
 
